@@ -32,13 +32,8 @@
                                             class="profile">
                                     </a>
                                     @else
-                                        @if(\App::environment('heroku'))
-                                        <img src="https://ideathon.s3-ap-northeast-1.amazonaws.com/images/profilePicture/defaultPicture.jpg"
-                                        alt="プロフィール画像" class="profile">
-                                        @else
-                                    <img src="{{asset('storage/images/profilePicture/defaultPicture.jpg')}}"
-                                        alt="プロフィール画像" class="profile">
-                                        @endif
+                                    <img src="https://ideathon.s3-ap-northeast-1.amazonaws.com/images/profilePicture/defaultPicture.jpg"
+                                    alt="プロフィール画像" class="profile">
                                     @endif
                                     @if(Auth::check() && Auth::user()->id == $user->id)
                                     <a href="{{route('profile.edit',['user_id' => $user->profile->user_id])}}"
