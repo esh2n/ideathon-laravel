@@ -60,7 +60,11 @@ class Idea extends Model
                 'heart'=> 'color:red;'
             ],
         ];
-        $color_name = $colorName[$this->job_id - 1];
+        if (\App::environment('heroku')) {
+            $color_name = $colorName[($this->job_id-1)/10];
+        }else {
+            $color_name = $colorName[$this->job_id - 1];
+        }
         return $color_name;
     }
 }
