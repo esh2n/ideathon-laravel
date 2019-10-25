@@ -143,7 +143,7 @@ $('.idea2').on('click', function () {
   $('.js-like').attr('ideaId',id);
   $('.js-dislike').attr('ideaId',id);
   $('.modal-body').html("<div><p class='h2'>"+body+"</p><p class='display-5 created-at'>"+createdAt+"</p></div>");
-  $('.modal-title').html("<div style='display:flex;'><a href='/profile/"+userId+"'><img src='/"+picturePath+"' class='profile-image'></a><div class='ml-4'><p>"+nickname+"</p><h2>"+title+"</h2></<h2></div>");
+  $('.modal-title').html("<div style='display:flex;'><a href='/profile/"+userId+"'><img src='"+picturePath+"' class='profile-image'></a><div class='ml-4'><p>"+nickname+"</p><h2>"+title+"</h2></<h2></div>");
   $('.button-chat').attr('onclick', "openChatBox("+user+","+id+","+profile+");");
 });
 function addUser(user,id,profile) { 

@@ -24,7 +24,7 @@
         <nav class="navbar navbar-light navbar-expand bg-dark d-flex justify-content-between">
             <div class="d-flex align-items-center">
                 @if(Auth::check())
-                <i><a href="{{ route('profile.index', ['user_id' => Auth::user()->id]) }}"><img src="/{{Auth::user()->profile->picture_path}}" alt="img" class="pt-2 profile-img rounded-circle"></a></i>
+                <i><a href="{{ route('profile.index', ['user_id' => Auth::user()->id]) }}"><img src="{{Auth::user()->profile->picture_path}}" alt="img" class="pt-2 profile-img rounded-circle"></a></i>
                 @endif
                 <span>
                     <a class="navbar-brand text-white px-3" href="{{ route('idea.index') }}"><i class="far fa-lightbulb h3"></i>  アイデア村</a>
