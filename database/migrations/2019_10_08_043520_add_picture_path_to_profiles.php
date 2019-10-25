@@ -16,7 +16,7 @@ class AddPicturePathToProfiles extends Migration
        Schema::table('profiles', function (Blueprint $table) {
             $table->string('picture_path')
                   ->after('gender')
-                  ->default('storage/images/profilePicture/defaultPicture.jpg');
+                  ->default('https://ideathon.s3-ap-northeast-1.amazonaws.com/images/profilePicture/defaultPicture.jpg');
         });
     }
 
