@@ -1,4 +1,4 @@
-# TeamProject - Ideathon
+# Ideathon
 
 ## INTRODUCTION
 
